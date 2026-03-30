@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdConnect - Talent Award</title>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/nominee.css">
+  </head>
+  <body>
+    {% include 'partials/header.liquid' %}
+
+    <section class="heroNominee">
+      <div class="heroContainer">
+        <div class="nomineeInfo">
+          <div class="slug">Home \ Talent Award \ {{ nomination.title | json | replace: '"', '' }}</div>
+          <h1>{{ nomination.title | json | replace: '"', '' }}</h1>
+          <ul>
+            <li><span class="bold">Opleiding:</span> {{ nomination.course }}</li>
+            <li><span class="bold">Institutie:</span> {{ nomination.institution }}</li>
+            <li><span class="bold">Variant:</span> {{ nomination.education_variant }}</li>
+            <li><span class="bold">Vorige opleiding:</span> {{ nomination.previous_course }}</li>
+          </ul>
+        </div>
+        <img src="https://fdnd-agency.directus.app/assets/{{ nomination.profile_picture }}">
+      </div>
+    </section>
+
+    <section class="bio">
+      <video
+        src="https://www.deassociatedegree.nl/wp-content/uploads/2026/01/Video-Ad-Talent-Award-Vera-Driessen-Fontys-Hogeschool-1-2.mp4"
+        controls
+      ></video>
+      <p>{{ nomination.body }}</p>
+    </section>
+
+    <section class="nominatie">
+      <div class="divider">
+        <hr>
+        <h3>Nominatie Hogeschool</h3>
+        <hr>
+      </div>
+
+      <div class="quote">
+        <div class="quoteMarker"></div>
+        <p>
+          Namens het team van Ad Zorg en Technologie dragen wij Vera Driessen voor als Ad Talent 2026. Vera heeft na
+          haar Bachelor Verpleegkunde bewust gekozen voor de Ad-opleiding om haar nieuwsgierigheid naar innovatie en
+          technologie verder te ontwikkelen. Deze keuze getuigt van ondernemerschap en vakmanschap in het zorgdomein.
+
+          Tijdens haar afstudeerproject ‘Sociale Robotica binnen Kempenhaeghe’ onderzocht Vera hoe de inzet van robot
+          Ivy persoonsgerichter kan worden door de impact op cliënten en medewerkers meetbaar te maken. Zij paste een
+          bestaande vragenlijst aan en evalueerde deze met alle relevante stakeholders. Hiermee toont zij haar vermogen
+          om samen met de omgeving duurzame oplossingen te realiseren die bijdragen aan inclusieve zorg en
+          maatschappelijke impact.
+
+          Vera reflecteert actief op haar ontwikkeling en heeft geleerd haar visie en ideeën te delen, wat haar
+          zelfvertrouwen en regie versterkt. Inmiddels vervult zij de rol van projectleider Sociale Robotica en neemt
+          het voortouw bij implementatie van technologische innovaties. Daarnaast begeleidt zij studenten en promoot de
+          opleiding met enthousiasme. Vera is een inspirerend rolmodel en een schoolvoorbeeld van Leven Lang Leren.
+        </p>
+        <p class="quoteur">– Pieter van Gorkom, Ad Zorg en Technologie</p>
+      </div>
+    </section>
+
+    <section class="nominatie">
+      <div class="divider">
+        <hr>
+        <h3>Aanbeveling externe stakeholder</h3>
+        <hr>
+      </div>
+
+      <div class="quote">
+        <div class="quoteMarker"></div>
+        <p>
+          “Vanuit intrinsieke motivatie en behoefte aan verbreding startte Vera de Ad Zorg en Technologie. Op eigen
+          initiatief blies zij het project sociale robotica bij Kempenhaeghe nieuw leven in. Tijdens haar opleiding
+          onderzocht zij de impact van sociale robots op bewoners én teams. Ze schreef een stevig onderbouwd plan van
+          aanpak en zorgde voor draagvlak binnen de organisatie. Het project sluit aan bij maatschappelijke thema’s
+          zoals personeelstekorten, technologische innovatie en duurzame inzetbaarheid. De impact is groot: bewoners
+          ervaren meer eigen regie, minder eenzaamheid en meer levensgeluk; zorgmedewerkers hebben minder werkdruk, meer
+          tijd voor zorgtaken en meer werkplezier. Vera realiseerde niet alleen implementatie op de werkvloer, maar
+          bouwde ook een regionaal en landelijk netwerk voor kennisdeling. Door haar enthousiasme en
+          doorzettingsvermogen is zij nu naast haar rol als verpleegkundige ook projectleider sociale robotica. Zo maakt
+          zij zichtbaar hoe waardevol technologie is voor de toekomst van de zorg.”
+        </p>
+        <p class="quoteur">- Gerard van Cranenbroek, clustermanager Kempenhaeghe </p>
+      </div>
+    </section>
+  </body>
+</html>

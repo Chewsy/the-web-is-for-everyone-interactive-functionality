@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdConnect</title>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/index.css">
+  </head>
+  <body>
+    {% include 'partials/header.liquid' %}
+
+    <section class="heroHome">
+      <div class="heroContainer">
+
+        <h1>Het landelijke platform voor Associate degrees</h1>
+        <p>
+          Ad-netwerk samen om kennis te delen, samen te werken en de kwaliteit en zichtbaarheid van Associate degrees te
+          versterken.
+        </p>
+        <div class="buttonRow">
+        <a class="button">Meer over Ad's</a>
+        <a class="buttonSecundair">Kom naar de Ad-dag</a>
+        </div>
+      </div>
+      <img src="/assets/zaal-ad-dag.BdbefTnX.jpg">
+    </section>
+
+    <section class="laatsteNieuws">
+          <div class="divider">
+        <hr>
+        <h2>Het laatste nieuws</h2>
+        <hr>
+      </div>
+
+        <div class="nieuwsContainer">
+        {% for article in news %}
+          <a href="news/{{ article.title }}"><article class="news">
+            {% if article.hero == nill %}
+              <img src="https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1906669723.jpg">
+            {% else %}
+              <img src="https://fdnd-agency.directus.app/assets/{{ article.hero }}">
+            {% endif %}
+            <p class="datum">{{ article.date | date: '%d %B, %Y' }}</p>
+            <h4>{{ article.title }}</h4>
+            <hr>
+            <p>{{ article.description | truncate: 200}}<p>
+            </article>
+        {% endfor %}
+      </div>
+
+      </section>
+          {% include 'partials/footer.liquid' %}
+  </body>
+</html>

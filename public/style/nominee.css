@@ -1,0 +1,109 @@
+.heroNominee {
+    height: 350px;
+    background-color: #0e141b;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 36.8px 0px 0px;
+
+    & .heroContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0px 71.25px;
+        padding: 48px 0px 0px;
+        justify-content: space-between;
+
+        & .nomineeInfo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &p {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 48px;
+        }
+
+        & img {
+            margin-right: 48px;
+            border-radius: 16px 16px 0px 0px;
+        }
+
+        & ul {
+            padding: 0;
+            list-style-type: none;
+
+            & li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.bold {
+    font-weight: 600;
+    padding-right: 5px;
+}
+
+.bio {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 40px;
+    align-items: flex-start;
+    margin-top: 40px;
+
+    & video {
+        width: 500px;
+        height: auto;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.nominatie {
+    padding: 0 40px;
+    margin-top: 40px;
+
+    & .divider {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+
+        & hr {
+            flex: 1;
+            border: none;
+            border-top: 1px solid #fff;
+            margin: 0;
+        }
+    }
+
+    & .quote {
+        display: flex;
+        flex-direction: row;
+        height: max-content;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        & p {
+            margin: 0;
+            width: 95%;
+        }
+
+        & .quoteMarker {
+            height: auto;
+            width: 10px;
+            background-color: #cce3ff;
+        }
+
+        & .quoteur {
+            font-style: italic;
+            color: #cce3ff;
+        }
+    }
+}

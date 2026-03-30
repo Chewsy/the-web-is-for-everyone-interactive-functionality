@@ -1,0 +1,149 @@
+.heroProfielen {
+    height: max-content;
+    background-color: #0e141b;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 36.8px 0px 0px;
+
+    & .heroContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0px 71.25px;
+        padding: 48px 0px 0px;
+        justify-content: space-between;
+        padding-bottom: 40px;
+
+        & .profielenInfo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &p {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 48px;
+            width: 50%;
+        }
+    }
+}
+
+.profielenStappen {
+    padding-top: 20px;
+
+    & ol {
+        background-color: #0e141b59;
+
+        & li {
+            list-style-position: inside;
+            margin-bottom: 10px;
+            color: #cce3ff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.profielenBank {
+    padding: 0 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+    & p {
+        text-align: center;
+    }
+
+    & .bold {
+        font-weight: 600;
+    }
+
+    & h3 {
+        font-family: 'Archivo', sans-serif;
+        text-decoration: underline;
+        display: inline;
+        vertical-align: middle;
+
+        a{
+            color: #fff;
+        }
+    }
+
+    & .material-symbols-outlined {
+        vertical-align: middle;
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+    }
+
+    & .divider {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+
+        & hr {
+            flex: 1;
+            border: none;
+            border-top: 1px solid #fff;
+            margin: 0;
+        }
+    }
+
+    .profielenContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & p {
+            width: 70%;
+        }
+
+        & .profielen {
+            overflow: auto;
+            width: 50%;
+            padding-top: 20px;
+        }
+
+        & details {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+table {
+    border: 1px solid #00408f;
+    height: 100%;
+    width: 70%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 5px;
+    text-align: left;
+    margin: 0 auto;
+
+    & th {
+        background-color: #0e141b;
+    }
+
+    & td {
+        border: 1px solid #00408f;
+        background-color: #13273e;
+        color: #cce3ff;
+        padding: 5px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    & tr.ladoHeader td {
+        background-color: #17212c;
+    }
+}

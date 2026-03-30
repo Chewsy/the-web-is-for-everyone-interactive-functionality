@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdConnect - Talent Award</title>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/adTalentAward.css">
+  </head>
+  <body>
+    {% include 'partials/header.liquid' %}
+
+    <section class="heroTalentAward">
+      <div class="heroContainer">
+        <div class="slug">Home \ Talent Award</div>
+
+        <h1>Ad Talent Award</h1>
+        <p>
+          Jaarlijks reikt het Overlegplatform de Ad Talent Award uit aan twee Associate degree-talenten, die worden
+          benoemd tot landelijke Ad-ambassadeurs. Alle aangesloten hogescholen kunnen een Ad-talent nomineren. De
+          winnaars ontvangen de award tijdens de jaarlijkse Ad-dag en vertegenwoordigen het Ad-onderwijs in Nederland.
+        </p>
+        <a class="button">Lees meer</a>
+      </div>
+      <img src="/assets/ad-talent-awards.Ddt_57AT.jpg">
+    </section>
+
+    <section class="intro">
+      <div class="introTekst">
+        <img src="/assets/blobs.svg">
+        <h2>Wat is Ad Talent award?</h2>
+        <p>
+          De Ad Talent Award is een jaarlijkse onderscheiding die door het Overlegplatform Associate degrees wordt
+          uitgereikt. Elke aangesloten hogeschool kan één student nomineren als “Ad Talent” en van alle genomineerden
+          worden er twee landelijk uitgeroepen tot Ad-ambassadeur. Deze erkenning vindt plaats tijdens de jaarlijkse
+          Ad-dag.
+        </p>
+      </div>
+
+      <div class="introCardsContainer">
+        <div class="introCards">
+          <img src="/assets/blobs.svg">
+          <h2>Wat maakt iemand tot een Ad Talent?</h2>
+          <p>
+            Een Ad Talent is een student die uitblinkt in zijn of haar Associate degree-opleiding. Dit kan blijken uit
+            academische prestaties, leiderschap, betrokkenheid bij de gemeenschap, innovatie of andere opmerkelijke
+            bijdragen aan de hogeschool en de bredere samenleving. Ad Talenten worden erkend voor hun inzet, passie en
+            potentieel om een positieve impact te maken in hun vakgebied en daarbuiten.
+          </p>
+        </div>
+
+        <div class="introCards">
+          <img src="/assets/blobs-wit.svg">
+          <h2>Waarom de Ad Talent Award?</h2>
+          <p>
+            De Ad Talent Award is opgericht om de uitmuntendheid en het potentieel van Associate degree-studenten te
+            erkennen en te vieren. Door deze onderscheiding willen we niet alleen de prestaties van individuele
+            studenten benadrukken, maar ook het belang van Ad-onderwijs in Nederland onderstrepen. De award dient als
+            inspiratie voor andere studenten en draagt bij aan het versterken van de reputatie van Associate degrees als
+            waardevolle en impactvolle opleidingsvorm.
+          </p>
+        </div>
+
+        <div class="introCards">
+          <img src="/assets/blobs.svg">
+          <h2>Wat maakt iemand tot een Ad Talent?</h2>
+          <p>
+            Een Ad Talent is een student die uitblinkt in zijn of haar Associate degree-opleiding. Dit kan blijken uit
+            academische prestaties, leiderschap, betrokkenheid bij de gemeenschap, innovatie of andere opmerkelijke
+            bijdragen aan de hogeschool en de bredere samenleving. Ad Talenten worden erkend voor hun inzet, passie en
+            potentieel om een positieve impact te maken in hun vakgebied en daarbuiten.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="voorgaandeWinaarContainer">
+      <div class="divider">
+        <hr>
+        <h3>Voorgaande talent award winnaars</h3>
+        <hr>
+      </div>
+
+      <article class="voorgaandeWinnaar">
+        <div class="winnaarInfo">
+          <img src="https://fdnd-agency.directus.app/assets/48f68e0e-b38f-4037-a699-47abe8ae32d0">    
+
+          <div class="infoTekst">
+            <h3>Summer Rous</h3>
+            <p>
+              Summer heeft de Talent Awards gewonnen in 2025! Haar motto is geïnspireerd op de bekende uitspraak van
+              Pippi Langkous: “Ik heb het nog nooit gedaan, dus ik denk dat ik het wel kan.” Haar docenten omschrijven
+              Summer als een studente die veel energie heeft, altijd positief is en opdrachtgevers weet te verrassen met
+              creatieve ideeën.
+            </p>
+          </div>
+        </div>
+      </article>
+      <div class="divider">
+        <hr>
+        <h3>Huidige nominees</h3>
+        <hr>
+      </div>
+    </section>
+
+    <section class="huidigeNominaties">
+      <div class="nominatiesContainer">
+        {% for nomination in nominations %}
+          <a href="nominee/{{ nomination.title | replace: '"', '' | replace: ' ', '-' }}"><div class="nominatie">
+            {% if nomination.profile_picture == null %}
+              <img src="https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1906669723.jpg">
+            {% else %}
+              <img src="https://fdnd-agency.directus.app/assets/{{ nomination.profile_picture }}">
+            {% endif %}
+            <h4>{{ nomination.title }}</h4>
+            <ul>
+              <li>{{ nomination.course }}</li>
+              <li>{{ nomination.institution }}</li>
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </body>
+</html>

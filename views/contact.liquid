@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdConnect</title>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/contact.css">
+  </head>
+  <body>
+    {% include 'partials/header.liquid' %}
+
+    <section class="contactIntro">
+      <div class="slug">Home \ Contact</div>
+      <h1>Vragen? Neem contact op</h1>
+      <p class="vragenP">
+        Heb je vragen of wil je meer weten over Associate Degrees neem dan via het onderstaande formulier contact met
+        ons op.
+      </p>
+    </section>
+
+    <div class="contact">
+    <form class="contact-form svelte-19y1n4" method="POST">
+      <h2>Contactformulier</h2>
+      <input type="hidden" name="access_key" value="6195e1b0-246a-4f48-ad4a-36914847623b" class="svelte-19y1n4">
+      <input type="hidden" name="subject" value="Nieuwe inzending contactformulier" class="svelte-19y1n4">
+      <input type="hidden" name="from_name" value="Overlegplatform Ad" class="svelte-19y1n4">
+      <label for="name" class="svelte-19y1n4">
+        <p class="svelte-19y1n4">Naam + Achternaam<span class="svelte-19y1n4">*</span></p>
+        <input type="text" name="name" id="name" placeholder="Bijv. Jan van Huizen" required="" class="svelte-19y1n4"
+      ></label>
+      <label for="email" class="svelte-19y1n4">
+        <p class="svelte-19y1n4">E-mailadres<span class="svelte-19y1n4">*</span></p>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Bijv. janvanhuizen@gmail.com"
+          required=""
+          pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+          class="svelte-19y1n4"
+      ></label>
+      <label for="message" class="svelte-19y1n4">
+        <p class="svelte-19y1n4">Jouw vraag<span class="svelte-19y1n4">*</span></p>
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Beste Overlegplatform Ad's, ik heb een vraag over.."
+          required=""
+          class="svelte-19y1n4"
+        ></textarea>
+      </label>
+      <button class="button" type="submit">Formulier verzenden</button>
+      <p>Velden met een * zijn verplicht</p>
+    </form>
+    </div>
+    {% include 'partials/footer.liquid' %}
+  </body>
+</html>
