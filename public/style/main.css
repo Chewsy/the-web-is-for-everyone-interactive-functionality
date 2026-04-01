@@ -19,12 +19,11 @@
 }
 
 html {
-    background-color: hsl(213, 100%, 13%);
     color: #fff;
     margin: 0;
 
     & a {
-        color: #fff;
+        color: #000000;
         text-decoration: none;
 
         &:hover {
@@ -32,7 +31,7 @@ html {
         }
 
         &:visited {
-            color: #fff;
+            color: #000000;
         }
     }
 }
@@ -46,7 +45,7 @@ body {
 
 
 header {
-    background-color: hsl(213, 100%, 13%);
+    background-color: #cce3ff;
     height: 50px;
     width: 100%;
 
@@ -59,7 +58,7 @@ header {
 
     & ul {
         display: flex;
-        color: #fff;
+        color: black;
         font-family: 'Clash Display', sans-serif;
         list-style-type: none;
         gap: 30px;
@@ -69,7 +68,6 @@ header {
 }
 
 nav {
-    background-color: #0e141b;
     height: 100px;
 
     display: flex;
@@ -82,7 +80,7 @@ nav {
 
     & ul {
         display: flex;
-        color: #cce3ff;
+        color: #001e42;
         font-family: 'Clash Display Bold', sans-serif;
         list-style-type: none;
         gap: 24px;
@@ -92,7 +90,7 @@ nav {
     }
 
     & a {
-        color: #cce3ff;
+        color: #001e42;
         text-decoration: none;
 
         &:hover {
@@ -100,12 +98,12 @@ nav {
         }
 
         &:visited {
-            color: #cce3ff;
+            color: #001e42;
         }
     }
 
     .navButton {
-        border-color: #cce3ff;
+        border-color: #001e42;
         border-radius: 10px;
         border-style: solid;
         border-width: 1px;
@@ -137,9 +135,23 @@ p {
 }
 
 footer {
-    background-color: #0e141b;
+    background-color: #00408f;
     padding: 40px;
     margin-top: 40px;
+    color: #fff;
+
+    & a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:visited {
+            color: #fff;
+        }
+    }
 
     & .navContainer {
         display: grid;

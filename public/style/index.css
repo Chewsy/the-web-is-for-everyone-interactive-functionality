@@ -5,6 +5,8 @@
     justify-content: center;
     padding: 36.8px 0px 0px;
     margin-bottom: 20px;
+    background-color: #e6f1ff;
+    color: #001e42;
 
     .heroContainer {
         display: flex;
@@ -29,13 +31,14 @@
     margin-top: 20px;
 
     & .button {
-        background-color: #00408f;
-        border-color: #fff;
+        background-color: #fff;
+        border-color: #00408f;
         border-radius: 15px;
         border-style: solid;
         border-width: 1.5px;
+        color: #00408f;
         display: inline;
-        font-family: 'Clash Display', sans-serif;
+        font-family: 'ClashDisplay', sans-serif;
         padding: 17.6px 28.8px;
         width: max-content;
     }
@@ -43,7 +46,8 @@
     & .buttonSecundair {
         margin-left: 10px;
 
-        border-color: #cce3ff;
+        border-color: #00408f;
+        color: #00408f;
         border-radius: 15px;
         border-style: solid;
         border-width: 1.5px;
@@ -83,53 +87,90 @@
 
 .nieuwsContainer {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: auto;
-    justify-items: stretch;
-    grid-gap: 40px;
-    align-items: center;
+    justify-items: center;
+    grid-gap: 32px;
+    align-items: start;
     justify-content: center;
-
-    & a:hover {
-        text-decoration: none;
-        transform: scale(1.05);
-    }
 
 
     & .news {
         display: flex;
         flex-direction: column;
-        align-content: space-between;
-        width: 410px;
-        height: 450px;
-        column-gap: 10px;
-        grid-template-rows: auto 1fr;
-        background-color: #0e141b;
+        background-color: #fff;
+        width: 100%;
+        max-width: 420px;
+        height: 540px;
+        max-height: 540px;
+        border: 1px solid #839ab5;
+        border-radius: 16px;
+        padding: 11.2px;
+        overflow: hidden;
+        box-shadow: 0px 1.0762px 3.58734px 0px #8d8d8d12;
+        transition: transform 150ms ease, box-shadow 150ms ease;
+    }
+
+    & .news:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+        text-decoration: none;
+    }
+
+    & .newsImageLink {
+        display: block;
+    }
+
+    & .news img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        display: block;
+    }
+
+    & .newsContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px;
+        color: #0e141b;
+        font-family: 'Archivo', sans-serif;
+        height: 100%;
+    }
+
+    & .news h4 {
+        padding: 0;
+        margin: 0;
+        font-family: 'Clash Display', sans-serif;
+        color: #001e42;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 28.6px;
+    }
+
+    & .newsDescription {
+        margin: 0;
+        color: #0e141b;
+        font-family: 'Archivo', sans-serif;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 30.6px;
+    }
+
+    & .newsButton {
+        margin-top: 4px;
+        width: fit-content;
+        padding: 17.6px 28.8px;
         border-radius: 15px;
-        padding: 10px;
-
-        & img {
-            width: auto;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        & h4 {
-            padding: 0;
-            margin: 0;
-            font-family: 'Archivo', sans-serif;
-        }
-
-        & .datum {
-            font-style: italic;
-            color: #cce3ff;
-        }
-
-        & hr {
-            width: 100%;
-            border-width: 0.5px;
-            border-color: #cce3ff;
-        }
+        border-style: solid;
+        border-width: 1.5px;
+        border-color: #cce3ff;
+        background-color: transparent;
+        color: #001e42;
+        font-family: 'Clash Display', sans-serif;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
     }
 }

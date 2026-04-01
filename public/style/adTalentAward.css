@@ -1,10 +1,11 @@
 .heroTalentAward {
     height: 485px;
-    background-color: #0e141b;
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding: 36.8px 0px 0px;
+    background-color: #e6f1ff;
+    color: #001e42;
 
     .heroContainer {
         display: flex;
@@ -22,6 +23,19 @@
     & img {
         margin-right: 48px;
         border-radius: 16px 16px 0px 0px;
+    }
+
+    & .button {
+        background-color: #fff;
+        border-color: #00408f;
+        border-radius: 15px;
+        border-style: solid;
+        border-width: 1.5px;
+        color: #00408f;
+        display: inline;
+        font-family: 'ClashDisplay', sans-serif;
+        padding: 17.6px 28.8px;
+        width: max-content;
     }
 }
 
@@ -67,8 +81,9 @@
     padding: 0px 16px;
 
     & .introCards {
-        background-color: #0e141b;
+        background-color: #e6f1ff;
         border-color: #00408f;
+        color: #001e42;
         border-radius: 20px;
         border-style: solid;
         border-width: 1.5px;
@@ -81,6 +96,7 @@
 
         &:nth-child(2) {
             background-color: #00408f;
+            color: #fff;
         }
 
         & p {
@@ -117,7 +133,8 @@
 
     & .voorgaandeWinnaar {
         justify-content: center;
-        background-color: #0e141b;
+        background-color: #e6f1ff;
+        color: #001e42;
         border-radius: 15px;
         display: flex;
         flex-direction: column;
@@ -179,7 +196,9 @@
         grid-template-columns: 150px 1fr;
         column-gap: 10px;
         grid-template-rows: auto 1fr;
-        background-color: #0e141b;
+        background-color: #e6f1ff;
+        color: #001e42;
+
         border-radius: 15px;
 
         & img {

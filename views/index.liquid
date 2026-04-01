@@ -35,17 +35,20 @@
 
         <div class="nieuwsContainer">
         {% for article in news %}
-          <a href="news/{{ article.title }}"><article class="news">
-            {% if article.hero == nill %}
-              <img src="https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1906669723.jpg">
-            {% else %}
-              <img src="https://fdnd-agency.directus.app/assets/{{ article.hero }}">
-            {% endif %}
-            <p class="datum">{{ article.date | date: '%d %B, %Y' }}</p>
-            <h4>{{ article.title }}</h4>
-            <hr>
-            <p>{{ article.description | truncate: 200}}<p>
-            </article>
+          <article class="news">
+            <a class="newsImageLink" href="news/{{ article.title }}">
+              {% if article.hero %}
+                <img src="https://fdnd-agency.directus.app/assets/{{ article.hero }}" alt="{{ article.title }}">
+              {% endif %}
+            </a>
+            <div class="newsContent">
+              <h4>{{ article.title }}</h4>
+              {% if article.description %}
+                <p class="newsDescription">{{ article.description }}</p>
+              {% endif %}
+              <a class="button newsButton" href="news/{{ article.title }}">Meer informatie</a>
+            </div>
+          </article>
         {% endfor %}
       </div>
 
