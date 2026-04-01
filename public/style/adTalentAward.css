@@ -46,7 +46,7 @@
 
     & .introTekst {
         align-items: center;
-        color: #fff;
+        color: #001e42;
         display: flex;
         flex-direction: column;
         gap: 16px;
