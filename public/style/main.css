@@ -19,7 +19,7 @@
 }
 
 html {
-    color: #fff;
+    color: #001e42;
     margin: 0;
 
     & a {
@@ -41,6 +41,12 @@ body {
     font-family: 'Clash Display', sans-serif;
     width: 100%;
 
+    & hr {
+        flex: 1;
+        border: none;
+        border-top: 1px solid #001e42;
+        margin: 0;
+    }
 }
 
 
@@ -169,7 +175,7 @@ footer {
     }
 
     & hr {
-
         width: 100%;
+        border-top: 1px solid #fff;
     }
 }

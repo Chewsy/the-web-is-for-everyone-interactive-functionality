@@ -1,6 +1,7 @@
 .heroNominee {
     height: 350px;
-    background-color: #0e141b;
+    background-color: #e6f1ff;
+    color: #001e42;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -13,6 +14,7 @@
         margin: 0px 71.25px;
         padding: 48px 0px 0px;
         justify-content: space-between;
+
 
         & .nomineeInfo {
             display: flex;
@@ -72,23 +74,32 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         gap: 20px;
         width: 100%;
-
-        & hr {
-            flex: 1;
-            border: none;
-            border-top: 1px solid #fff;
-            margin: 0;
-        }
     }
+}
+
+.quotes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
     & .quote {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        align-content: space-between;
+        background-color: #e6f1ff;
+        color: #001e42;
+        width: 48%;
+        min-height: 320px;
         height: max-content;
         gap: 10px;
         flex-wrap: wrap;
+        border: 1px solid #001e42;
+        padding: 10px;
+        border-radius: 10px;
 
         & p {
             margin: 0;
@@ -98,12 +109,12 @@
         & .quoteMarker {
             height: auto;
             width: 10px;
-            background-color: #cce3ff;
+            background-color: #001e42;
         }
 
         & .quoteur {
             font-style: italic;
-            color: #cce3ff;
+            color: #001e42;
         }
     }
 }
