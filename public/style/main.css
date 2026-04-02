@@ -348,6 +348,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
+    background-color: #fff;
 
     position: sticky;
 
@@ -387,6 +388,11 @@ nav {
 
         &:hover {
             text-decoration: underline;
+            background-color: #00408f;
+
+            & a {
+                color: #fff;
+            }
         }
     }
 }

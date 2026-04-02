@@ -55,6 +55,11 @@
         font-family: 'Clash Display', sans-serif;
         padding: 17.6px 28.8px;
         width: max-content;
+
+        &:hover{
+            background-color: #00408f;
+            color: #fff;
+        }
     }
 
 }

@@ -97,6 +97,10 @@
         &:nth-child(2) {
             background-color: #00408f;
             color: #fff;
+
+            & h2{
+                color: #fff;
+            }
         }
 
         & p {
@@ -198,6 +202,7 @@
         grid-template-rows: auto 1fr;
         background-color: #e6f1ff;
         color: #001e42;
+        align-content: space-around;
 
         border-radius: 15px;
 
@@ -220,6 +225,7 @@
             grid-row: 2 / 3;
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
     }
 }
