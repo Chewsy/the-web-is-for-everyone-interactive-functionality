@@ -88,13 +88,10 @@
     & .quote {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-content: space-between;
         background-color: #e6f1ff;
         color: #001e42;
         width: 48%;
-        min-height: 320px;
-        height: max-content;
+        min-height: 350px;
         gap: 10px;
         flex-wrap: wrap;
         border: 1px solid #001e42;

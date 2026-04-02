@@ -99,14 +99,14 @@
         width: 100%;
     }
 
-.profielenContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .profielenContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    & p {
-        width: 70%;
-    }
+        & p {
+            width: 70%;
+        }
 
         & .profielen {
             overflow: auto;
@@ -142,6 +142,7 @@
 
 .tabs label .tabTitle {
     font-size: 0.95rem;
+    font-family: archivo;
 
 }
 
@@ -152,6 +153,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-family: archivo;
 }
 
 .tabs .tab {
