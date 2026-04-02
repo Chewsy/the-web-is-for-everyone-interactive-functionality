@@ -87,11 +87,24 @@ app.get('/contact', async function (request, response) {
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
-app.post('/', async function (request, response) {
+app.post('/contact', async function (request, response) {
    // Je zou hier data kunnen opslaan, of veranderen, of wat je maar wilt
    // Er is nog geen afhandeling van een POST, dus stuur de bezoeker terug naar /
-   response.redirect(303, '/')
+     await fetch("https://fdnd-agency.directus.app/items/adconnect_contact", {
+    method: "POST",
+    body: JSON.stringify({
+      name: request.body.name,
+      email: request.body.email,
+      message: request.body.message,
+    }),
+
+    headers: {
+      "Content-Type": "application/json;charset=UTF-8",
+    },
+  });
+   response.redirect(303, '/contact')
 })
+
 
 app.use((req, res) => {
   res.status(404).send("Pagina bestaat niet!")

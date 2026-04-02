@@ -10,50 +10,75 @@
   <body>
     {% include 'partials/header.liquid' %}
 
-    <section class="contactIntro">
+    <section class="contactHero">
       <div class="slug">Home \ Contact</div>
       <h1>Vragen? Neem contact op</h1>
-      <p class="vragenP">
+      <p class="heroText">
         Heb je vragen of wil je meer weten over Associate Degrees neem dan via het onderstaande formulier contact met
         ons op.
       </p>
     </section>
 
-    <div class="contact">
-    <form class="contact-form svelte-19y1n4" method="POST">
-      <h2>Contactformulier</h2>
-      <input type="hidden" name="access_key" value="6195e1b0-246a-4f48-ad4a-36914847623b" class="svelte-19y1n4">
-      <input type="hidden" name="subject" value="Nieuwe inzending contactformulier" class="svelte-19y1n4">
-      <input type="hidden" name="from_name" value="Overlegplatform Ad" class="svelte-19y1n4">
-      <label for="name" class="svelte-19y1n4">
-        <p class="svelte-19y1n4">Naam + Achternaam<span class="svelte-19y1n4">*</span></p>
-        <input type="text" name="name" id="name" placeholder="Bijv. Jan van Huizen" required="" class="svelte-19y1n4"
-      ></label>
-      <label for="email" class="svelte-19y1n4">
-        <p class="svelte-19y1n4">E-mailadres<span class="svelte-19y1n4">*</span></p>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Bijv. janvanhuizen@gmail.com"
-          required=""
-          pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
-          class="svelte-19y1n4"
-      ></label>
-      <label for="message" class="svelte-19y1n4">
-        <p class="svelte-19y1n4">Jouw vraag<span class="svelte-19y1n4">*</span></p>
-        <textarea
-          name="message"
-          id="message"
-          placeholder="Beste Overlegplatform Ad's, ik heb een vraag over.."
-          required=""
-          class="svelte-19y1n4"
-        ></textarea>
-      </label>
-      <button class="button" type="submit">Formulier verzenden</button>
-      <p>Velden met een * zijn verplicht</p>
-    </form>
-    </div>
+    <section class="contactContent">
+      <aside class="infoCard">
+        <h2>Contactgegevens</h2>
+        <p>
+          Heb je vragen? Vul het contactformulier in of neem contact op via de onderstaande contactgegevens.
+        </p>
+        <ul>
+          <li>
+            <span class="infoLabel">Telefoonnummer</span>
+          </li>
+          <li>
+            <span class="infoLabel">platformads@outlook.com</span>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="formCard">
+        <form class="formShell" method="POST" action="/contact">
+          <h2>Contactformulier</h2>
+
+          <input type="hidden" name="access_key" value="6195e1b0-246a-4f48-ad4a-36914847623b">
+          <input type="hidden" name="subject" value="Nieuwe inzending contactformulier">
+          <input type="hidden" name="from_name" value="Overlegplatform Ad">
+
+          <div class="fieldGrid">
+            <label for="name" class="fieldGroup">
+              <span>Naam + Achternaam <strong>*</strong></span>
+              <input type="text" name="name" id="name" placeholder="Bijv. Jan van Huizen" required>
+            </label>
+
+            <label for="email" class="fieldGroup">
+              <span>E-mailadres <strong>*</strong></span>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Bijv. janvanhuizen@gmail.com"
+                required
+                pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+              >
+            </label>
+          </div>
+
+          <label for="message" class="fieldGroup">
+            <span>Jouw vraag <strong>*</strong></span>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Beste Overlegplatform Ad's, ik heb een vraag over.."
+              required
+            ></textarea>
+          </label>
+
+          <div class="formActions">
+            <button class="button submitButton" type="submit">Formulier verzenden</button>
+            <p class="requiredNote">Velden met een '<strong>*</strong>' zijn verplicht</p>
+          </div>
+        </form>
+      </div>
+    </section>
     {% include 'partials/footer.liquid' %}
   </body>
 </html>
